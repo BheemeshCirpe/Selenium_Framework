@@ -30,6 +30,10 @@ public class Login_Page extends TestBase {
 	@FindBy(xpath= "//span[text()='Login']")
 	WebElement btnLogin;
 	
+	@FindBy(id= "webklipper-publisher-widget-container-notification-close-div")
+	WebElement imgNotification;
+	
+	
 	
 	
 	
@@ -42,7 +46,11 @@ public class Login_Page extends TestBase {
 	public Home_Page loginMakeMyTrip(String username,String password)  {
 		txtUsername.sendKeys(username);
 		
-		wait.until(ExpectedConditions.visibilityOf(btnContinue)).click();
+	
+		driver.switchTo().frame("webklipper-publisher-widget-container-notification-frame");
+		imgNotification.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(btnContinue));
 		
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		
