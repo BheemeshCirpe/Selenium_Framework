@@ -3,7 +3,9 @@ package com.makemytrip.qa.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -11,6 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.makemytrip.qa.base.TestBase;
+
+import net.bytebuddy.asm.Advice.Argument;
 
 
 
@@ -30,9 +34,9 @@ public class Login_Page extends TestBase {
 	@FindBy(xpath= "//span[text()='Login']")
 	WebElement btnLogin;
 	
-	@FindBy(id= "webklipper-publisher-widget-container-notification-close-div")
-	WebElement imgNotification;
 	
+	@FindBy(xpath = "//a[text()=' Create New Account ']")
+	WebElement btnNewCreatAccount;
 	
 	
 	
@@ -42,26 +46,31 @@ public class Login_Page extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 	
-	WebDriverWait wait = new WebDriverWait(driver,20);
-	public Home_Page loginMakeMyTrip(String username,String password)  {
-		txtUsername.sendKeys(username);
-		
 	
-		driver.switchTo().frame("webklipper-publisher-widget-container-notification-frame");
-		imgNotification.click();
-		
-		wait.until(ExpectedConditions.visibilityOf(btnContinue));
-		
+	
+	public Home_Page loginMakeMyTrip(String username,String password) throws InterruptedException  {
+		txtUsername.sendKeys(username);
+			
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		
+		js.executeScript("arguments[0].click();", btnContinue);
 		js.executeScript("arguments[0].click();", btnContinue);
 		
-		//btnContinue.click();
 		txtPassword.sendKeys(password);
-		
-		
 		btnLogin.click();
-		return new Home_Page();
 		
+		return new Home_Page();	
+	}
+	
+	
+	public Registration_Page navigateRegistrationPage() throws InterruptedException {
+		WebDriverWait wait= new WebDriverWait(driver,10);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(btnNewCreatAccount));
+		Thread.sleep(5000);
+		
+		//btnNewCreatAccount.click();
+		btnNewCreatAccount.click();
+		
+		return new Registration_Page();
 	}
 }

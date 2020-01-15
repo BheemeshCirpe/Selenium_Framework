@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.makemytrip.qa.util.TestUtil;
 
@@ -17,6 +18,7 @@ public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
+	public WebDriverWait wait;
 
 	public TestBase() {
 		try {
@@ -48,7 +50,7 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS); // for all the elements to load in page
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS); // for all the elements to load with which driver is interacting
-
+		WebDriverWait wait = new WebDriverWait(driver,5);
 		driver.get(prop.getProperty("url"));
 		
 		

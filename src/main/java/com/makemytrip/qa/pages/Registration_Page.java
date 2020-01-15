@@ -8,6 +8,8 @@ import com.makemytrip.qa.base.TestBase;
 public class Registration_Page extends TestBase{
 	
 	
+
+	
 	@FindBy(id = "emailOrPhone")
 	WebElement txtUserName;
 
@@ -18,7 +20,10 @@ public class Registration_Page extends TestBase{
 	WebElement btnCreatAccount;
 	
 	
+	
+	
 	public Home_Page crateAccount(String UserName,String Password) {
+		
 		
 		txtUserName.sendKeys(UserName);
 		txtPassword.sendKeys(Password);
