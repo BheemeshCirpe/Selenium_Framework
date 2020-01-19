@@ -18,11 +18,12 @@ import com.makemytrip.qa.base.TestBase;
 
 public class TestUtil extends TestBase {
 
-	public static long PAGE_LOAD_TIMEOUT = 5;
+	public static long PAGE_LOAD_TIMEOUT = 10;
 	public static long IMPLICIT_WAIT = 5;
 
 	
 	static String currentDir = System.getProperty("user.dir");
+	
 	public static String TESTDATA_SHEET_PATH = currentDir
 			+"//src//main//java//com//makemytrip//qa//testdata//MakeMyTrip_TestData.xlsx";
 

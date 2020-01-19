@@ -27,7 +27,6 @@ public class Registration_Page_Test extends TestBase {
 
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
-
 		initialization();
 
 		homepage = new Home_Page();

@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [makemytrip Application Test Automation Test Suite]">
-  <listeners>
-    <listener class-name="com.makemytrip.qa.ExtentReportListener.ExtentReporterNG"/>
-  </listeners>
-  <test name="Free makemytrip App Test Cases(failed)">
-    <parameter name="User_Name_4" value="makemytrip@gmail.com"/>
-    <parameter name="User_Name_5" value=""/>
-    <parameter name="User_Name_2" value="abc"/>
-    <parameter name="User_Name_3" value="automationtesting007bheem@gmail.com"/>
-    <parameter name="Password_5" value=""/>
-    <parameter name="User_Name_1" value="automationtesting007bheem@gmail.com"/>
-    <parameter name="Password_4" value=""/>
-    <parameter name="Password_3" value="123"/>
-    <parameter name="Password_2" value="Abcd**1478"/>
-    <parameter name="Password_1" value="capgemini@12345"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.makemytrip.qa.testcases.Holidays_Page_Test">
+      <class name="com.makemytrip.qa.testcases.Hotels_Page_Test">
         <methods>
-          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="navHolidaysPage"/>
+          <include name="searchSpecificHotel"/>
         </methods>
-      </class> <!-- com.makemytrip.qa.testcases.Holidays_Page_Test -->
+      </class> <!-- com.makemytrip.qa.testcases.Hotels_Page_Test -->
     </classes>
-  </test> <!-- Free makemytrip App Test Cases(failed) -->
-</suite> <!-- Failed suite [makemytrip Application Test Automation Test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -17,11 +17,12 @@ public class Holidays_Page_Test extends TestBase {
 	Holidays_Page holidays;
 	
 	
+	
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
 		initialization();
 		homepage = new Home_Page();
-		holidays= new Holidays_Page();
+		//holidays= new Holidays_Page();
 	}
 
 	@Test(priority=0)

@@ -22,18 +22,34 @@ public class Hotels_Page_Test extends TestBase{
 		hotels= new Hotels_Page();
 	}
 
-	@Test(priority=0)
-	public void navHotelsPage() {
+	
+	  @Test(priority=0) public void navHotelsPage() {
+	  
+	  homepage.navHotelPage();
+	  
+	  Assert.assertEquals(homepage.verifyPageTitle(),
+	  "MakeMyTrip.com: Save upto 60% on Hotel Booking 4,442,00+ Hotels Worldwide");
+	  
+	  }
+	 
+	
+	@Test(priority=1)
+	
+	public void searchSpecificHotel() throws InterruptedException
+	{
 		
-		homepage.navHotelPage();
+		homepage.navHotelPage().searchHotel("Goa, India");
 		
-		Assert.assertEquals(homepage.verifyPageTitle(), "MakeMyTrip.com: Save upto 60% on Hotel Booking 4,442,00+ Hotels Worldwide");
+		String str=homepage.verifyPageTitle();
+		
+		Assert.assertNotNull(str);
+		
+		
 		
 	}
 
-	@AfterMethod
-	public void tearDown() {
-		driver.quit();
-	}
+	
+	  @AfterMethod public void tearDown() { driver.quit(); }
+	 
 
 }

@@ -31,6 +31,8 @@ public class Home_Page extends TestBase {
 
 	@FindBy(id= "webklipper-publisher-widget-container-notification-close-div")
 	WebElement imgNotification; 
+	
+	
 	public Home_Page() {
 		PageFactory.initElements(driver, this); // to intialize webelements of that particular page
 	}
@@ -47,11 +49,13 @@ public class Home_Page extends TestBase {
 	public Login_Page navloginPage() {
 		btnLogin_Home.click(); // we are navigating to login page so we need to return login page object to
 							// access all the webelements of that page
-		WebDriverWait wait= new WebDriverWait(driver,10);
-		
-		driver.switchTo().frame("notification-frame-~19715760a");
-		wait.until(ExpectedConditions.visibilityOf(imgNotification));
-		imgNotification.click();  
+		/*
+		 * WebDriverWait wait= new WebDriverWait(driver,10);
+		 * 
+		 * driver.switchTo().frame("notification-frame-~19715760a");
+		 * wait.until(ExpectedConditions.visibilityOf(imgNotification));
+		 * imgNotification.click();
+		 */
 		driver.switchTo().parentFrame();
 		return new Login_Page();// once this is created, constructor of login page gets executed and we will
 								// have access of that page webelements

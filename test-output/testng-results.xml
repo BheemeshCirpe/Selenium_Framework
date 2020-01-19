@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="5" total="10" passed="5">
+<testng-results skipped="0" failed="0" ignored="4" total="11" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="makemytrip Application Test Automation Test Suite" duration-ms="46510" started-at="2020-01-15T11:13:12Z" finished-at="2020-01-15T11:13:59Z">
+  <suite name="makemytrip Application Test Automation Test Suite" duration-ms="78485" started-at="2020-01-19T18:36:42Z" finished-at="2020-01-19T18:38:00Z">
     <groups>
     </groups>
-    <test name="Free makemytrip App Test Cases" duration-ms="46510" started-at="2020-01-15T11:13:12Z" finished-at="2020-01-15T11:13:59Z">
+    <test name="Free makemytrip App Test Cases" duration-ms="78485" started-at="2020-01-19T18:36:42Z" finished-at="2020-01-19T18:38:00Z">
       <class name="com.makemytrip.qa.testcases.Villas_Apt_Page_Test">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Villas_Apt_Page_Test@66a3ffec]" name="setUp" is-config="true" duration-ms="4767" started-at="2020-01-15T16:43:52Z" finished-at="2020-01-15T16:43:56Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Villas_Apt_Page_Test@3e6fa38a]" name="setUp" is-config="true" duration-ms="4684" started-at="2020-01-20T00:07:14Z" finished-at="2020-01-20T00:07:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="navVillasPage()[pri:0, instance:com.makemytrip.qa.testcases.Villas_Apt_Page_Test@66a3ffec]" name="navVillasPage" duration-ms="1474" started-at="2020-01-15T16:43:56Z" finished-at="2020-01-15T16:43:58Z">
+        <test-method status="PASS" signature="navVillasPage()[pri:0, instance:com.makemytrip.qa.testcases.Villas_Apt_Page_Test@3e6fa38a]" name="navVillasPage" duration-ms="1313" started-at="2020-01-20T00:07:18Z" finished-at="2020-01-20T00:07:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navVillasPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Villas_Apt_Page_Test@66a3ffec]" name="tearDown" is-config="true" duration-ms="809" started-at="2020-01-15T16:43:58Z" finished-at="2020-01-15T16:43:59Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Villas_Apt_Page_Test@3e6fa38a]" name="tearDown" is-config="true" duration-ms="875" started-at="2020-01-20T00:07:20Z" finished-at="2020-01-20T00:07:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.makemytrip.qa.testcases.Villas_Apt_Page_Test -->
       <class name="com.makemytrip.qa.testcases.Flights_Page_Test">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Flights_Page_Test@6f7fd0e6]" name="setUp" is-config="true" duration-ms="5091" started-at="2020-01-15T16:43:28Z" finished-at="2020-01-15T16:43:33Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Flights_Page_Test@27efef64]" name="setUp" is-config="true" duration-ms="4395" started-at="2020-01-20T00:06:54Z" finished-at="2020-01-20T00:06:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="navFilightsPage()[pri:0, instance:com.makemytrip.qa.testcases.Flights_Page_Test@6f7fd0e6]" name="navFilightsPage" duration-ms="1548" started-at="2020-01-15T16:43:33Z" finished-at="2020-01-15T16:43:35Z">
+        <test-method status="PASS" signature="navFilightsPage()[pri:0, instance:com.makemytrip.qa.testcases.Flights_Page_Test@27efef64]" name="navFilightsPage" duration-ms="1554" started-at="2020-01-20T00:06:58Z" finished-at="2020-01-20T00:07:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navFilightsPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Flights_Page_Test@6f7fd0e6]" name="tearDown" is-config="true" duration-ms="799" started-at="2020-01-15T16:43:35Z" finished-at="2020-01-15T16:43:36Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Flights_Page_Test@27efef64]" name="tearDown" is-config="true" duration-ms="1245" started-at="2020-01-20T00:07:00Z" finished-at="2020-01-20T00:07:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Flights_Page_Test@27efef64]" name="setUp" is-config="true" duration-ms="4922" started-at="2020-01-20T00:07:21Z" finished-at="2020-01-20T00:07:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="searchSpecificFlight()[pri:1, instance:com.makemytrip.qa.testcases.Flights_Page_Test@27efef64]" name="searchSpecificFlight" duration-ms="16302" started-at="2020-01-20T00:07:26Z" finished-at="2020-01-20T00:07:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchSpecificFlight -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Flights_Page_Test@27efef64]" name="tearDown" is-config="true" duration-ms="839" started-at="2020-01-20T00:07:42Z" finished-at="2020-01-20T00:07:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.makemytrip.qa.testcases.Flights_Page_Test -->
       <class name="com.makemytrip.qa.testcases.Login_Page_Test">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Login_Page_Test@27efef64]" name="setUp" is-config="true" duration-ms="5286" started-at="2020-01-15T16:43:12Z" finished-at="2020-01-15T16:43:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Login_Page_Test@59f99ea]" name="setUp" is-config="true" duration-ms="6508" started-at="2020-01-20T00:06:42Z" finished-at="2020-01-20T00:06:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginCheck_ValidUserDetails(java.lang.String, java.lang.String)[pri:0, instance:com.makemytrip.qa.testcases.Login_Page_Test@27efef64]" name="loginCheck_ValidUserDetails" duration-ms="9957" started-at="2020-01-15T16:43:17Z" finished-at="2020-01-15T16:43:27Z">
+        <test-method status="PASS" signature="loginCheck_ValidUserDetails(java.lang.String, java.lang.String)[pri:0, instance:com.makemytrip.qa.testcases.Login_Page_Test@59f99ea]" name="loginCheck_ValidUserDetails" duration-ms="4466" started-at="2020-01-20T00:06:48Z" finished-at="2020-01-20T00:06:53Z">
           <params>
             <param index="0">
               <value>
@@ -55,39 +67,43 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginCheck_ValidUserDetails -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Login_Page_Test@27efef64]" name="tearDown" is-config="true" duration-ms="801" started-at="2020-01-15T16:43:27Z" finished-at="2020-01-15T16:43:28Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Login_Page_Test@59f99ea]" name="tearDown" is-config="true" duration-ms="800" started-at="2020-01-20T00:06:53Z" finished-at="2020-01-20T00:06:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.makemytrip.qa.testcases.Login_Page_Test -->
-      <class name="com.makemytrip.qa.testcases.Holidays_Page_Test">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Holidays_Page_Test@3e6fa38a]" name="setUp" is-config="true" duration-ms="4804" started-at="2020-01-15T16:43:45Z" finished-at="2020-01-15T16:43:49Z">
+      <class name="com.makemytrip.qa.testcases.Hotels_Page_Test">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Hotels_Page_Test@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4501" started-at="2020-01-20T00:07:01Z" finished-at="2020-01-20T00:07:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="navHolidaysPage()[pri:0, instance:com.makemytrip.qa.testcases.Holidays_Page_Test@3e6fa38a]" name="navHolidaysPage" duration-ms="1363" started-at="2020-01-15T16:43:49Z" finished-at="2020-01-15T16:43:51Z">
+        <test-method status="PASS" signature="navHotelsPage()[pri:0, instance:com.makemytrip.qa.testcases.Hotels_Page_Test@6f7fd0e6]" name="navHotelsPage" duration-ms="764" started-at="2020-01-20T00:07:05Z" finished-at="2020-01-20T00:07:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navHotelsPage -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Hotels_Page_Test@6f7fd0e6]" name="setUp" is-config="true" duration-ms="5542" started-at="2020-01-20T00:07:43Z" finished-at="2020-01-20T00:07:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="searchSpecificHotel()[pri:1, instance:com.makemytrip.qa.testcases.Hotels_Page_Test@6f7fd0e6]" name="searchSpecificHotel" duration-ms="12111" started-at="2020-01-20T00:07:48Z" finished-at="2020-01-20T00:08:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchSpecificHotel -->
+      </class> <!-- com.makemytrip.qa.testcases.Hotels_Page_Test -->
+      <class name="com.makemytrip.qa.testcases.Holidays_Page_Test">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Holidays_Page_Test@47c62251]" name="setUp" is-config="true" duration-ms="5325" started-at="2020-01-20T00:07:06Z" finished-at="2020-01-20T00:07:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="navHolidaysPage()[pri:0, instance:com.makemytrip.qa.testcases.Holidays_Page_Test@47c62251]" name="navHolidaysPage" duration-ms="1419" started-at="2020-01-20T00:07:11Z" finished-at="2020-01-20T00:07:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navHolidaysPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Holidays_Page_Test@3e6fa38a]" name="tearDown" is-config="true" duration-ms="785" started-at="2020-01-15T16:43:51Z" finished-at="2020-01-15T16:43:52Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Holidays_Page_Test@47c62251]" name="tearDown" is-config="true" duration-ms="874" started-at="2020-01-20T00:07:13Z" finished-at="2020-01-20T00:07:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.makemytrip.qa.testcases.Holidays_Page_Test -->
-      <class name="com.makemytrip.qa.testcases.Hotels_Page_Test">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.makemytrip.qa.testcases.Hotels_Page_Test@47c62251]" name="setUp" is-config="true" duration-ms="4222" started-at="2020-01-15T16:43:36Z" finished-at="2020-01-15T16:43:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="navHotelsPage()[pri:0, instance:com.makemytrip.qa.testcases.Hotels_Page_Test@47c62251]" name="navHotelsPage" duration-ms="3964" started-at="2020-01-15T16:43:40Z" finished-at="2020-01-15T16:43:44Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navHotelsPage -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.makemytrip.qa.testcases.Hotels_Page_Test@47c62251]" name="tearDown" is-config="true" duration-ms="788" started-at="2020-01-15T16:43:44Z" finished-at="2020-01-15T16:43:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.makemytrip.qa.testcases.Hotels_Page_Test -->
     </test> <!-- Free makemytrip App Test Cases -->
   </suite> <!-- makemytrip Application Test Automation Test Suite -->
 </testng-results>
