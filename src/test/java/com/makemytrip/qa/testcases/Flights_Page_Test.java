@@ -19,14 +19,14 @@ public class Flights_Page_Test extends TestBase {
 
 	}
 
-	@Test(priority=0)
+	@Test(priority=0,enabled = false)
 	public void navFilightsPage() {
 		homepage.navFlightPage();
 		Assert.assertEquals(homepage.verifyPageTitle(),
 				"Flight Booking, Flight Tickets Booking at Lowest Airfare | MakeMyTrip");
 	}
 
-	@Test(priority=1)
+	@Test(priority=1,enabled = false)
 	public void searchSpecificFlight() throws InterruptedException {
 		homepage.navFlightPage().searchFlight("Delhi", "Mumbai");
 
@@ -34,10 +34,16 @@ public class Flights_Page_Test extends TestBase {
 
 		Assert.assertNotNull(str);
 	}
-
-	@AfterMethod
-	public void tearDown() {
-		driver.quit();
+	
+	
+	@Test(priority=2)
+	public void searchSpecificFlight_2() throws InterruptedException {
+		homepage.navFlightPage().searchFlight_2("Chennai", "Paris");
 	}
+	
+	
+	
+	/* @AfterMethod public void tearDown() { driver.quit(); } */
+	 
 
 }
