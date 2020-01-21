@@ -28,7 +28,7 @@ public class Flights_Page_Test extends TestBase {
 		return data;
 	}
 
-	@Test(priority=0)
+	@Test(priority=0,enabled = false)
 	public void navFilightsPage() {
 		homepage.navFlightPage();
 		Assert.assertEquals(homepage.verifyPageTitle(),
@@ -46,13 +46,18 @@ public class Flights_Page_Test extends TestBase {
 	
 	
 	@Test(priority=2,dataProvider ="getMakemyTripTestData" )
-	public void searchSpecificFlight_2(String fromCity,String ToCity) throws InterruptedException {
-		homepage.navFlightPage().searchFlight_2(fromCity, ToCity);
+
+	public void searchSpecificFlight_2(String fromCity,String toCity, String date) throws InterruptedException {
+		
+		String actual_date=date.substring(0, 2);
+		
+	
+		homepage.navFlightPage().searchFlight_2(fromCity,toCity,actual_date);
 	}
 	
 	
 	
-	 @AfterMethod public void tearDown() { driver.quit(); } 
+	// @AfterMethod public void tearDown() { driver.quit(); } 
 	 
 
 }
