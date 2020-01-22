@@ -41,6 +41,33 @@ public class Flights_Page extends TestBase {
 	@FindBy(xpath = "//button[text()='Continue']")
 	WebElement btnContinue;
 
+	@FindBy(xpath = "//*[@placeholder='Mobile No']")
+	WebElement txtMobileNo;
+
+	@FindBy(xpath = "//*[@placeholder='Email']")
+	WebElement txtEmail;
+
+	@FindBy(xpath = "//*[text()='+ ADD ADULT']")
+	WebElement lnkAddAdults;
+
+	@FindBy(xpath = "//*[@placeholder='First Name']")
+	WebElement txtFirstName;
+
+	@FindBy(xpath = "//*[@placeholder='Last Name']")
+	WebElement txtLastName;
+
+	@FindBy(xpath = "//span[text()='MALE']")
+	WebElement btnGender;
+
+	@FindBy(xpath = "//button[text()='Continue']")
+	WebElement btnContinue_2;
+
+	@FindBy(xpath = "//*[@id='ancillary-continue']")
+	WebElement btnContinue_3;
+
+	@FindBy(xpath = "//a[text()='Done']")
+	WebElement btnConfirm;
+
 	public Flights_Page() {
 		PageFactory.initElements(driver, this);
 	}
@@ -156,7 +183,31 @@ public class Flights_Page extends TestBase {
 		btnSecureTrip.click();
 		js.executeScript("arguments[0].scrollIntoView(true);", btnContinue);
 
-		btnContinue.click();
+		Thread.sleep(3000);
+
+		// btnContinue.click();
+
+		js.executeScript("arguments[0].click()", btnContinue);
+
+		lnkAddAdults.click();
+
+		txtFirstName.sendKeys("BheemBoy");
+		txtLastName.sendKeys("Cirpe");
+
+		js.executeScript("arguments[0].click()", btnGender);
+
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].click()", btnConfirm);
+
+		txtMobileNo.sendKeys("9700181055");
+
+		txtEmail.sendKeys("abc@gmail.com");
+		btnContinue_2.click();
+
+		Thread.sleep(3000);
+		// btnContinue_3.click();
+
+		js.executeScript("arguments[0].click()", btnContinue_3);
 
 	}
 
