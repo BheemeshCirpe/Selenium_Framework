@@ -79,32 +79,9 @@ public class Flights_Page extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void searchFlight(String fromCity, String toCity) throws InterruptedException {
-		Actions action = new Actions(driver);
 
-		action.moveToElement(txtFromCity).click().build().perform();
 
-		Thread.sleep(3000);
-
-		action.sendKeys(fromCity).build().perform();
-		Thread.sleep(3000);
-
-		action.moveToElement(txtToCity).click().build().perform();
-
-		Thread.sleep(3000);
-
-		action.sendKeys(toCity).build().perform();
-		Thread.sleep(3000);
-
-		action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
-
-		action.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.TAB).build().perform();
-
-		btnSearchFilght.click();
-
-	}
-
-	public void searchFlight_2(String fromCity, String toCity, String date ,String firstName,String lastName,String emailId) throws InterruptedException, IOException {
+	public void searchFlight(String fromCity, String toCity, String date ,String firstName,String lastName,String emailId) throws InterruptedException, IOException {
 
 		txtFromCity.sendKeys(fromCity);
 

@@ -37,30 +37,23 @@ public class Flights_Page_Test extends TestBase {
 				"Flight Booking, Flight Tickets Booking at Lowest Airfare | MakeMyTrip");
 	}
 
-	@Test(priority=1,enabled = false)
-	public void searchSpecificFlight() throws InterruptedException {
-		homepage.navFlightPage().searchFlight("Delhi", "Mumbai");
 
-		String str = homepage.verifyPageTitle();
-
-		Assert.assertNotNull(str);
-	}
 	
 	
 	@Test(priority=2,dataProvider ="getMakemyTripTestData" )
 
-	public void searchSpecificFlight_2(String fromCity,String toCity, String date,String fistName, String lastName,String emailId) throws InterruptedException, IOException {
+	public void searchSpecificFlight(String fromCity,String toCity, String date,String fistName, String lastName,String emailId) throws InterruptedException, IOException {
 		
 		String actual_date=date.substring(0, 2);
 		
 		
 	
-		homepage.navFlightPage().searchFlight_2(fromCity,toCity,actual_date,fistName,lastName,emailId);
+		homepage.navFlightPage().searchFlight(fromCity,toCity,actual_date,fistName,lastName,emailId);
 	}
 	
 	
 	
-	// @AfterMethod public void tearDown() { driver.quit(); } 
+	 @AfterMethod public void tearDown() { driver.quit(); } 
 	 
 
 }
