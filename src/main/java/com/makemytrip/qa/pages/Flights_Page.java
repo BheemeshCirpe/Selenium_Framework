@@ -1,5 +1,6 @@
 package com.makemytrip.qa.pages;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -15,6 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.makemytrip.qa.base.TestBase;
+import com.makemytrip.qa.util.TestUtil;
 
 public class Flights_Page extends TestBase {
 
@@ -67,6 +69,11 @@ public class Flights_Page extends TestBase {
 
 	@FindBy(xpath = "//a[text()='Done']")
 	WebElement btnConfirm;
+	
+	@FindBy(xpath = "(//*[@class='booking_summary_wrap']//following::div)[3]")
+	WebElement imgBookingSummary;
+	
+	
 
 	public Flights_Page() {
 		PageFactory.initElements(driver, this);
@@ -97,7 +104,7 @@ public class Flights_Page extends TestBase {
 
 	}
 
-	public void searchFlight_2(String fromCity, String toCity, String date) throws InterruptedException {
+	public void searchFlight_2(String fromCity, String toCity, String date ,String firstName,String lastName,String emailId) throws InterruptedException, IOException {
 
 		txtFromCity.sendKeys(fromCity);
 
@@ -191,8 +198,8 @@ public class Flights_Page extends TestBase {
 
 		lnkAddAdults.click();
 
-		txtFirstName.sendKeys("BheemBoy");
-		txtLastName.sendKeys("Cirpe");
+		txtFirstName.sendKeys(firstName);
+		txtLastName.sendKeys(lastName);
 
 		js.executeScript("arguments[0].click()", btnGender);
 
@@ -201,14 +208,21 @@ public class Flights_Page extends TestBase {
 
 		txtMobileNo.sendKeys("9700181055");
 
-		txtEmail.sendKeys("abc@gmail.com");
+		txtEmail.sendKeys(emailId);
 		btnContinue_2.click();
 
 		Thread.sleep(3000);
 		// btnContinue_3.click();
 
 		js.executeScript("arguments[0].click()", btnContinue_3);
+		
+		TestUtil.takeScreenshotAtEndOfTest(imgBookingSummary);
 
 	}
 
 }
+
+
+
+
+

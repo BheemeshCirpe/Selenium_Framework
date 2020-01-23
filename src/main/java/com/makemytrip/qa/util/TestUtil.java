@@ -13,6 +13,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 
 import com.makemytrip.qa.base.TestBase;
 
@@ -59,8 +60,8 @@ public class TestUtil extends TestBase {
 		return data;
 	}
 
-	public static void takeScreenshotAtEndOfTest() throws IOException {
-		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	public static void takeScreenshotAtEndOfTest(WebElement webElement) throws IOException {
+		File scrFile = ((TakesScreenshot) webElement).getScreenshotAs(OutputType.FILE);
 		
 		FileUtils.copyFile(scrFile, new File(currentDir + "//screenshots//" + System.currentTimeMillis() + ".png"));
 	}

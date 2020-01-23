@@ -1,5 +1,7 @@
 package com.makemytrip.qa.testcases;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -47,12 +49,13 @@ public class Flights_Page_Test extends TestBase {
 	
 	@Test(priority=2,dataProvider ="getMakemyTripTestData" )
 
-	public void searchSpecificFlight_2(String fromCity,String toCity, String date) throws InterruptedException {
+	public void searchSpecificFlight_2(String fromCity,String toCity, String date,String fistName, String lastName,String emailId) throws InterruptedException, IOException {
 		
 		String actual_date=date.substring(0, 2);
 		
+		
 	
-		homepage.navFlightPage().searchFlight_2(fromCity,toCity,actual_date);
+		homepage.navFlightPage().searchFlight_2(fromCity,toCity,actual_date,fistName,lastName,emailId);
 	}
 	
 	
