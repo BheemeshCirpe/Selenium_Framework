@@ -188,7 +188,7 @@ public class Flights_Page extends TestBase {
 		txtEmail.sendKeys(emailId);
 		btnContinue_2.click();
 
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		// btnContinue_3.click();
 
 		js.executeScript("arguments[0].click()", btnContinue_3);

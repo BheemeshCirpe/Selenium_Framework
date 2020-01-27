@@ -30,11 +30,13 @@ public class Flights_Page_Test extends TestBase {
 		return data;
 	}
 
-	@Test(priority=0,enabled = false)
+	@Test(priority=0)
 	public void navFilightsPage() {
 		homepage.navFlightPage();
 		Assert.assertEquals(homepage.verifyPageTitle(),
 				"Flight Booking, Flight Tickets Booking at Lowest Airfare | MakeMyTrip");
+		
+		
 	}
 
 
@@ -46,8 +48,6 @@ public class Flights_Page_Test extends TestBase {
 		
 		String actual_date=date.substring(0, 2);
 		
-		
-	
 		homepage.navFlightPage().searchFlight(fromCity,toCity,actual_date,fistName,lastName,emailId);
 	}
 	

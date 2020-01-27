@@ -30,9 +30,10 @@ public class Villas_Apt_Page_Test extends TestBase {
 		
 		homepage.navVillasPage();
 		
-		Assert.assertEquals(homepage.verifyPageTitle(), "MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights & Holiday");
-		
+		Assert.assertEquals(homepage.verifyPageTitle(), "MakeMyTrip - #1 Travel Website 50% OFF on Hotels, Flights & Holiday");	
 	}
+	
+	
 
 	@AfterMethod
 	public void tearDown() {

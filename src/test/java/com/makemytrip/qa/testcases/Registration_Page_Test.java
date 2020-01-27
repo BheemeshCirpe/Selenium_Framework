@@ -40,7 +40,7 @@ public class Registration_Page_Test extends TestBase {
 		return data;
 	}
 
-	@Test(priority=0,dataProvider="getMakemyTripTestData",enabled=false)
+	@Test(priority=0,dataProvider="getMakemyTripTestData")
 	
 	public void registerAccount(String UserName,String Password) throws InterruptedException {
 		

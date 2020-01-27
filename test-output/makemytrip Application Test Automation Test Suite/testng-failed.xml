@@ -10,7 +10,7 @@
     <classes>
       <class name="com.makemytrip.qa.testcases.Flights_Page_Test">
         <methods>
-          <include name="searchSpecificFlight" invocation-numbers="0 2"/>
+          <include name="searchSpecificFlight" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
