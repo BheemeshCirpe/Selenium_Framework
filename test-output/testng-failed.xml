@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [makemytrip Application Test Automation Test Suite]">
-  <listeners>
-    <listener class-name="com.makemytrip.qa.ExtentReportListener.ExtentReporterNG"/>
-  </listeners>
-  <test name="Free makemytrip App Test Cases(failed)">
-    <parameter name="User_Name_1" value="automationtesting007bheem@gmail.com"/>
-    <parameter name="Password_1" value="capgemini@12345"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.makemytrip.qa.testcases.Flights_Page_Test">
+      <class name="com.makemytrip.qa.testcases.Bus_Page_Test">
         <methods>
-          <include name="searchSpecificFlight" invocation-numbers="0"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
-        </methods>
-      </class> <!-- com.makemytrip.qa.testcases.Flights_Page_Test -->
-      <class name="com.makemytrip.qa.testcases.Login_Page_Test">
-        <methods>
-          <include name="loginCheck_ValidUserDetails" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="bookBus"/>
         </methods>
-      </class> <!-- com.makemytrip.qa.testcases.Login_Page_Test -->
+      </class> <!-- com.makemytrip.qa.testcases.Bus_Page_Test -->
     </classes>
-  </test> <!-- Free makemytrip App Test Cases(failed) -->
-</suite> <!-- Failed suite [makemytrip Application Test Automation Test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

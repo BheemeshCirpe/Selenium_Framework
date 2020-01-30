@@ -11,6 +11,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import com.makemytrip.qa.base.TestBase;
 import com.makemytrip.qa.util.TestUtil;
@@ -27,19 +28,63 @@ public class Buses_Page extends TestBase {
 	List<WebElement> suggestions_1;
 	@FindBy(xpath = "//*[@for='toCity']//following::li[@role=\"option\"]")
 	List<WebElement> suggestions_2;
-	
+
 	@FindBy(xpath = "//*[text()='Search']")
-	WebElement btnSearchFilght;
+	WebElement btnSearchBus;
+
+	
+	@FindBy(id = "webklipper-publisher-widget-container-notification-frame")
+	WebElement imgNotification;
+	
+	@FindBy(id = "webklipper-publisher-widget-container-notification-close-div")
+	WebElement imgNotificationClose;
+	
+	
+	
 	
 	@FindBy(xpath = "(//*[text()='Select Seats'])[1]")
 	WebElement btnSelectTickets;
-	
-	
-	
 
-	public void searchFlight(String fromCity, String toCity, String date, String firstName, String lastName,
+	@FindBy(xpath = "//*[text()='BOOK SEATS']")
+	WebElement btnBookSeats;
+
+	@FindBy(xpath = "//*[text()='Continue to Book Now']")
+	WebElement btnContinueBook;
+
+	@FindBy(id = "fname")
+	WebElement txtName;
+
+	@FindBy(xpath = "//input[@id='age']")
+	WebElement txtAge;
+
+	@FindBy(xpath = "//div[@class='GenderDropDownContainer']")
+	WebElement lstGender;
+
+	@FindBy(xpath = "//li[text()='Male']")
+	WebElement lstMale;
+
+	@FindBy(id = "contactEmail")
+	WebElement txtEmailId;
+
+	@FindBy(id = "mobileNumber")
+	WebElement txtMobileNo;
+
+	@FindBy(css = ".sc-gzOgki.izXzsS")
+	WebElement rdoSecureTrip;
+
+	@FindBy(xpath = "(//*[@class='booking_summary_wrap']//following::div)[3]")
+	WebElement imgBookingSummary;
+	
+	public Buses_Page() {
+		PageFactory.initElements(driver, this);
+	}
+
+
+	public void searchBus(String fromCity, String toCity, String date, String firstName, String lastName,
 			String emailId) throws InterruptedException, IOException {
-
+		Actions action = new Actions(driver);
+		
+		txtFromCity.click();
 		txtFromCity.sendKeys(fromCity);
 
 		Thread.sleep(2000);
@@ -57,6 +102,7 @@ public class Buses_Page extends TestBase {
 			}
 		}
 
+		action.sendKeys(Keys.TAB).build().perform();
 		txtToCity.sendKeys(toCity);
 
 		for (WebElement suggest_2 : suggestions_2) {
@@ -70,7 +116,7 @@ public class Buses_Page extends TestBase {
 			}
 		}
 
-		Actions action = new Actions(driver);
+		
 		action.sendKeys(Keys.TAB).build().perform();
 
 		Thread.sleep(3000);
@@ -105,12 +151,31 @@ public class Buses_Page extends TestBase {
 
 		}
 
-		btnSearchFilght.click();
+		btnSearchBus.click();
 
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
+		
+		  driver.switchTo().frame(imgNotification); 
+		  imgNotificationClose.click();
+		  driver.switchTo().parentFrame();
+		 
+
 		btnSelectTickets.click();
-		//TestUtil.takeScreenshotAtEndOfTest();
+		
+		driver.findElement(By.xpath("(//span[@class='sc-ifAKCX jEtqmF'])[1]")).click();
+		btnBookSeats.click();
+		txtName.sendKeys("Bheemesh");
+		txtAge.sendKeys("25");
+		
+		action.moveToElement(txtAge).moveToElement(lstMale).build().perform();
+		txtEmailId.sendKeys("abc@gmail.com");
+		txtMobileNo.sendKeys("9700181055");
+		rdoSecureTrip.click();
+		btnContinueBook.click();
+		
+		
+		 TestUtil.takeScreenshotAtEndOfTest(imgBookingSummary);
 
 	}
 

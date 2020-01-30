@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jan 27 21:21:06 IST 2020</td>
+<td>Started on:</td><td>Thu Jan 30 22:03:22 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>106 seconds (106079 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25354 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.makemytrip.qa.testcases.Flights_Page_Test.searchSpecificFlight()'><b>searchSpecificFlight</b><br>Test class: com.makemytrip.qa.testcases.Flights_Page_Test<br>Parameters: Mumbai, Hyderabad, 25.0, Bheemesh, Cirpe, bheemboy@gmail.com</td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;primaryBtn font24 latoBlack widget...Btn &quot;&gt;Search&lt;/a&gt; is not clickable at point (791, 394). Other element would receive the click: &lt;div class=&quot;hsBackDrop&quot;&gt;&lt;/div&gt;
+<td title='com.makemytrip.qa.testcases.Bus_Page_Test.bookBus()'><b>bookBus</b><br>Test class: com.makemytrip.qa.testcases.Bus_Page_Test</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-cMljjf drsecP&quot;&gt;...&lt;/a&gt; is not clickable at point (1302, 632). Other element would receive the click: &lt;iframe name=&quot;notification-frame-22a3454b1&quot; id=&quot;webklipper-publisher-widget-container-notification-frame&quot; frameborder=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; style=&quot;display: block; z-index: 16776272; position: fixed; visibility: visible; height: 191px; width: 370px; top: auto; left: auto; right: 0px; bottom: 0px;&quot; data-notification-layout-id=&quot;i78egaf&quot; data-notification-layout-name=&quot;classic&quot; cd_frame_id_=&quot;324aafcf3d28b496402d0d4ec01dcf5b&quot;&gt;&lt;/iframe&gt;
   (Session info: chrome=79.0.3945.130)
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;BHEEMESH-DESKTO&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\91970\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50496}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fa1f368c604a9ac419dbc1a7b943e810
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\91970\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57673}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a305f3fbd0127425fcb79d64a9b76840
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -100,9 +100,9 @@ Session ID: fa1f368c604a9ac419dbc1a7b943e810
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.makemytrip.qa.pages.Flights_Page.searchFlight(Flights_Page.java:152)
-	at com.makemytrip.qa.testcases.Flights_Page_Test.searchSpecificFlight(Flights_Page_Test.java:49)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.makemytrip.qa.pages.Buses_Page.searchBus(Buses_Page.java:164)
+	at com.makemytrip.qa.testcases.Bus_Page_Test.bookBus(Bus_Page_Test.java:25)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -128,14 +128,14 @@ Session ID: fa1f368c604a9ac419dbc1a7b943e810
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1269773610", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1269773610'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;primaryBtn font24 latoBlack widget...Btn &quot;&gt;Search&lt;/a&gt; is not clickable at point (791, 394). Other element would receive the click: &lt;div class=&quot;hsBackDrop&quot;&gt;&lt;/div&gt;
+</pre></div><a href='#' onClick='toggleBox("stack-trace1266265220", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1266265220'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;sc-cMljjf drsecP&quot;&gt;...&lt;/a&gt; is not clickable at point (1302, 632). Other element would receive the click: &lt;iframe name=&quot;notification-frame-22a3454b1&quot; id=&quot;webklipper-publisher-widget-container-notification-frame&quot; frameborder=&quot;0&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; style=&quot;display: block; z-index: 16776272; position: fixed; visibility: visible; height: 191px; width: 370px; top: auto; left: auto; right: 0px; bottom: 0px;&quot; data-notification-layout-id=&quot;i78egaf&quot; data-notification-layout-name=&quot;classic&quot; cd_frame_id_=&quot;324aafcf3d28b496402d0d4ec01dcf5b&quot;&gt;&lt;/iframe&gt;
   (Session info: chrome=79.0.3945.130)
 Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
 System info: host: &apos;BHEEMESH-DESKTO&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\91970\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50496}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: fa1f368c604a9ac419dbc1a7b943e810
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\91970\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57673}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a305f3fbd0127425fcb79d64a9b76840
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -153,9 +153,9 @@ Session ID: fa1f368c604a9ac419dbc1a7b943e810
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.makemytrip.qa.pages.Flights_Page.searchFlight(Flights_Page.java:152)
-	at com.makemytrip.qa.testcases.Flights_Page_Test.searchSpecificFlight(Flights_Page_Test.java:49)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.makemytrip.qa.pages.Buses_Page.searchBus(Buses_Page.java:164)
+	at com.makemytrip.qa.testcases.Bus_Page_Test.bookBus(Bus_Page_Test.java:25)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -182,26 +182,8 @@ Session ID: fa1f368c604a9ac419dbc1a7b943e810
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>9</td>
-<td>com.makemytrip.qa.testcases.Flights_Page_Test@28d25987</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.makemytrip.qa.testcases.Flights_Page_Test.searchSpecificFlight()'><b>searchSpecificFlight</b><br>Test class: com.makemytrip.qa.testcases.Flights_Page_Test<br>Parameters: Hyderabad, Chennai, 30.0, Rupa, E, rupa@gmail.com</td>
-<td></td>
-<td>35</td>
-<td>com.makemytrip.qa.testcases.Flights_Page_Test@28d25987</td></tr>
-<tr>
-<td title='com.makemytrip.qa.testcases.Flights_Page_Test.searchSpecificFlight()'><b>searchSpecificFlight</b><br>Test class: com.makemytrip.qa.testcases.Flights_Page_Test<br>Parameters: Hyderabad, Mumbai, 31.0, Monica, Anantha Reddy, monica@yahoo.com</td>
-<td></td>
-<td>36</td>
-<td>com.makemytrip.qa.testcases.Flights_Page_Test@28d25987</td></tr>
+<td>16</td>
+<td>com.makemytrip.qa.testcases.Bus_Page_Test@d8355a8</td></tr>
 </table><p>
 </body>
 </html>

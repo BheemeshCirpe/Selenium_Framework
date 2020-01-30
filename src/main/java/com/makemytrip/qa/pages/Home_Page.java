@@ -29,8 +29,15 @@ public class Home_Page extends TestBase {
 	@FindBy(xpath = "//span[text()='Holidays']")
 	WebElement lnkHolidays;
 
+	
+	@FindBy(xpath = "//*[text()='Buses']")
+	WebElement lnkBuses;
+	
 	@FindBy(id= "webklipper-publisher-widget-container-notification-close-div")
 	WebElement imgNotification; 
+	
+	
+	
 	
 	
 	public Home_Page() {
@@ -82,5 +89,10 @@ public class Home_Page extends TestBase {
 	public Holidays_Page navHolidaysPage() {
 		lnkHolidays.click();
 		return new Holidays_Page();
+	}
+	
+	public Buses_Page navBusesPage() {
+		lnkBuses.click();
+		return new Buses_Page();
 	}
 }

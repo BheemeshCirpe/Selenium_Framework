@@ -25,8 +25,7 @@ public class Hotels_Page_Test extends TestBase{
 	
 	  @Test(priority=0) public void navHotelsPage() {
 	  
-	  homepage.navHotelPage();
-	  
+	  homepage.navHotelPage();  
 	  Assert.assertEquals(homepage.verifyPageTitle(),
 	  "MakeMyTrip.com: Save upto 60% on Hotel Booking 4,442,00+ Hotels Worldwide");
 	  
@@ -38,13 +37,9 @@ public class Hotels_Page_Test extends TestBase{
 	public void searchSpecificHotel() throws InterruptedException
 	{
 		
-		homepage.navHotelPage().searchHotel("Goa, India");
-		
+		homepage.navHotelPage().searchHotel("Goa, India");	
 		String str=homepage.verifyPageTitle();
-		
 		Assert.assertNotNull(str);
-		
-		
 		
 	}
 
