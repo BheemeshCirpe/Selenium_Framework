@@ -22,7 +22,7 @@ public class Bus_Page_Test extends TestBase {
 	@Test(priority = 0)
 	public void bookBus() throws InterruptedException, IOException {
 		
-		homepage.navBusesPage().searchBus("Hyderabad", "Chennai", "31", "2", "2", "2");
+		homepage.navBusesPage().searchBus("Hyderabad", "Chennai", "28", "2", "2", "2");
 		
 	}
 
